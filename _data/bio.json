@@ -1,11 +1,11 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
-    "label": "Student",
-    "picture": "https://techfolios.github.io/template/images/molly.png",
-    "email": "molly@hawaii.edu",
-    "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
+    "name": "Jie Bao",
+    "label": "Graduate Research Assistant",
+    "picture": "https://github.com/DiscoBroccoli/jiebao/blob/master/images/profil_300.jpg",
+    "email": "jiebao995@gmail.com",
+    "phone": "438-995-4178",
+    "website": "https://github.com/DiscoBroccoli/jiebao",
     "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2020.",
     "location": {
       "address": "",
