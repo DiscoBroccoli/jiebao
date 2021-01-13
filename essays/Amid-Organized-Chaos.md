@@ -24,7 +24,7 @@ New development in GPUs and machine/deep learning are changing the landscape for
 The reader might already be aware, the equations are usually presented using the Einstein Covention. The turbulent kinetic energy equation is
 
 <p align="center">
-<img src="src="../images/TKE_transport.gif">
+<img src="../images/TKE_transport.gif">
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@ Similarly to the <i> Reynolds decomposition </i>, The <i> Favre averaging </i> h
 Some useful rules:
 
 <p align="center">
-<img src="src="../images/favre_f.gif">
+<img src="../images/favre_f.gif">
 </p>
 
 <br />
