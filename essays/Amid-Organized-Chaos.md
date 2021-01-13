@@ -23,57 +23,9 @@ New development in GPUs and machine/deep learning are changing the landscape for
 
 The reader might already be aware, the equations are usually presented using the Einstein Covention. The turbulent kinetic energy equation is
 
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mfrac>
-      <mrow>
-        <mi>∂</mi>
-        <mover>
-          <mi>ρ</mi>
-          <mo accent="true">‾</mo>
-        </mover>
-        <mi>k</mi>
-      </mrow>
-      <mrow>
-        <mi>∂</mi>
-        <mi>t</mi>
-      </mrow>
-    </mfrac>
-    <mo>+</mo>
-    <mfrac>
-      <mrow>
-        <mi>∂</mi>
-        <mover>
-          <mi>ρ</mi>
-          <mo accent="true">‾</mo>
-        </mover>
-        <mi>k</mi>
-        <mover>
-          <msub>
-            <mi>u</mi>
-            <mi>i</mi>
-          </msub>
-          <mo accent="true">̃</mo>
-        </mover>
-      </mrow>
-      <mrow>
-        <mi>∂</mi>
-        <msub>
-          <mi>x</mi>
-          <mi>i</mi>
-        </msub>
-      </mrow>
-    </mfrac>
-    <mo>=</mo>
-    <mi>A</mi>
-    <mo>+</mo>
-    <mi>B</mi>
-    <mo>+</mo>
-    <mi>C</mi>
-    <mo>+</mo>
-    <mi>D</mi>
-  </mrow>
-</math>
+<p align="center">
+<img src="src="../images/TKE_transport.gif">
+</p>
 
 <p align="center">
 <img src="../images/table_PD.png">
@@ -87,28 +39,9 @@ Similarly to the <i> Reynolds decomposition </i>, The <i> Favre averaging </i> h
 
 Some useful rules:
 
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mover>
-      <mi>f</mi>
-      <mo accent="true">̃</mo>
-    </mover>
-    <mo>=</mo>
-    <mfrac>
-      <mover>
-        <mrow>
-          <mi>ρ</mi>
-          <mi>f</mi>
-        </mrow>
-        <mo accent="true">¯</mo>
-      </mover>
-      <mover>
-        <mi>ρ</mi>
-        <mo accent="true">‾</mo>
-      </mover>
-    </mfrac>
-  </mrow>
-</math>
+<p align="center">
+<img src="src="../images/favre_f.gif">
+</p>
 
 <br />
 
