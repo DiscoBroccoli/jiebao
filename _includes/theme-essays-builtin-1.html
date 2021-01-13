@@ -9,3 +9,17 @@
       {% endfor %}
   </div>
 </div>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+      var body = document.getElementsByTagName("body")[0];
+      body.style.cssText =
+          'background: url("../images/jupiter.jpeg");' +
+          'background-size: auto;' +
+          'background-position: center;' +
+          'background-repeat: no-repeat;';
+      var uhbtns = document.getElementsByClassName("uhbtn");
+      for(var i = 0; i < uhbtns.length; i++) {
+          uhbtns[i].cssText = "background-color: green;";
+      }
+  });
+</script>

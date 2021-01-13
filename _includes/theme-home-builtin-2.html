@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class="column">
+  <div style="background-color: white;" class="column" >
     <h2 class="header no-bottom">{{ site.data.bio.basics.name }}</h2>
     <p class="">{{ site.data.bio.basics.label }}</p>
     <p class="">
@@ -39,3 +39,17 @@
     </p>
   </div>
 </div>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+      var body = document.getElementsByTagName("body")[0];
+      body.style.cssText =
+          'background: url("../images/matterhorn2.png");' +
+          'background-size: auto;' +
+          'background-position: center;' +
+          'background-repeat: no-repeat;';
+      var uhbtns = document.getElementsByClassName("uhbtn");
+      for(var i = 0; i < uhbtns.length; i++) {
+          uhbtns[i].cssText = "background-color: green;";
+      }
+  });
+</script>

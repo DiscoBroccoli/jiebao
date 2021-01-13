@@ -1,53 +1,42 @@
 {
   "basics": {
     "name": "Jie Bao",
-    "label": "Graduate Research Assistant",
-    "picture": "https://discobroccoli.github.io/jiebao/images/profil_300.jpg",
+    "label": "MASc. Student & Research Assistant",
+    "picture": "https://discobroccoli.github.io/image-repoo/profil_300.jpg",
     "email": "jiebao995@gmail.com",
     "phone": "438-995-4178",
     "website": "https://github.com/DiscoBroccoli/jiebao",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2020.",
+    "summary": "I am working towards a Master of Applied Science in the Departement of Mechanical and Aerospace Engineering at Concordia University in Montreal. Expected graduation in Summer 2021.",
     "location": {
       "address": "",
-      "postalCode": "96822",
-      "city": "Honolulu",
-      "countryCode": "USA",
-      "region": "Hawaii"
+      "postalCode": "",
+      "city": "Brossard",
+      "countryCode": "Canada",
+      "region": "Quebec,"
     },
     "profiles": [
       {
         "network": "github",
-        "username": "mmaluhia",
-        "url": "http://github.com/changeme"
+        "username": "DiscoBroccoli",
+        "url": "http://github.com/DiscoBroccoli"
       },
       {
         "network": "linkedin",
-        "username": "mollymaluhia",
-        "url": "http://linkedin.com/in/changeme"
-      },
-      {
-        "network": "twitter",
-        "username": "mollymal",
-        "url": "http://twitter.com/changeme"
-      },
-      {
-        "network": "instagram",
-        "username": "molly",
-        "url": "http://instagram.com/changeme"
+        "username": "Jie Bao",
+        "url": "http://linkedin.com/in/jie-bao-863433116"
       }
     ]
   },
   "interests": [
     {
-      "name": "internet of things",
+      "name": "data science",
       "keywords": [
-        "Arduino",
-        "TI MSP430"
       ]
     },
     {
-      "name": "data mining",
+      "name": "computational fluids",
       "keywords": [
+	"turbulence modelling", "RANS"
       ]
     },
     {
@@ -61,19 +50,20 @@
       "name": "Languages and Frameworks",
       "level": "",
       "keywords": [
-        "C",
-        "C++",
-        "Java",
-        "Javascript",
-        "Assembly",
-        "Common Lisp"
+        "Python",
+        "Tensorflow",
+        "Matlab",
+        "Linux",
+        "Bash",
+        "Catia V5",
+	"Ansys",
+	"Latex"
       ]
     },
     {
       "name": "Toolsets/OS",
       "level": "",
       "keywords": [
-        "MacOS",
         "Ubuntu",
         "Git/GitHub",
         "g++",
