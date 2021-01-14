@@ -128,6 +128,6 @@ The final dissipation equation is:
 
 <br />
 
-In the interest of keeping this short, the entire proof (similar to production) can be found on my <a href="https://github.com/DiscoBroccoli/Turbulent-Modelling-using-Machine-Learning-Techniques/blob/main/documents/Favre-Averaging.pdf"><i class="large github icon "></i>github</a> page. Notice how large the equation becomes, the code in python is included on my github page as well.
+In the interest of keeping this short, the entire proof (similar to production) can be found on my <a href="https://github.com/DiscoBroccoli/Turbulent-Modelling-using-Machine-Learning-Techniques/blob/main/documents/Favre-Averaging.pdf"><i class="large github icon "></i>github</a> page. Notice how large the equation becomes, if you want to validate you can see my implmentation on python. The code is included on my github page as well.
 
 
