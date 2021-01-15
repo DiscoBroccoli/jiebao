@@ -53,11 +53,11 @@
         "Python",
         "Tensorflow",
         "Matlab",
-        "Linux",
-        "Bash",
+	"MS Office",
         "Catia V5",
 	"Ansys",
-	"Latex"
+	"Latex",
+	"Vim"
       ]
     },
     {
@@ -66,8 +66,7 @@
       "keywords": [
         "Ubuntu",
         "Git/GitHub",
-        "g++",
-        "TI LaunchPad"
+        "Bash"
       ]
     }
   ],

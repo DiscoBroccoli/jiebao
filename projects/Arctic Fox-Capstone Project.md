@@ -1,9 +1,9 @@
 ---
 layout: project
 type: project
-image: images/Isentropic_Vortex2.gif
-title: Isentropic Vortex
-permalink: projects/Fluid-Sims
+image: images/Logo_Arctic_Fox.PNG
+title: Arctic Fox - Capstone Project AERO 490
+permalink: projects/Arctic_Fox
 # All dates must be YYYY-MM-DD format!
 date: 2015-12-15
 labels:
