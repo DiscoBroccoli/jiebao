@@ -10,7 +10,7 @@
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Brossard",
+      "city": "Montreal",
       "countryCode": "Canada",
       "region": "Quebec,"
     },
@@ -72,75 +72,71 @@
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
-      "studyType": "B.S.",
-      "startDate": "2013-09-01",
+      "institution": "Concordia University, Montreal, Qc",
+      "area": "Computational Fluids & Artificial Intelligence, GPA: 4.0/4.3",
+      "studyType": "MASc.",
+      "startDate": "2019-09-01",
       "endDate": "Present",
-      "gpa": "",
-      "courses": [
+      "gpa": "3.98/4.3",
+      "courses": ["Applied Machine Learning - COMP 551 (McGill IUT)", "Aerospace Vehicule Performance - AERO 446", "Finite-Element Method in Computational Fluid Dynamics - ENGR 6261"
       ]
     }
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
+      "company": "Concordia University",
+      "position": "Teaching Assistant",
       "website": "",
-      "startDate": "2015-08-01",
+      "startDate": "2020-09-01",
       "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
+      "summary": "Head of guidance for senior aerospace students",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        "Oversee conceptual design phase of an organ delivering drone",
+        "Mentor students on best practices in the aerospace industry"
       ]
     },
     {
-      "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
+      "company": "Bombardier Aerospace",
+      "position": "Engineering Intern",
+      "website": "https://businessaircraft.bombardier.com/en/aircraft",
+      "startDate": "2017-05-01",
+      "endDate": "2017-08-24",
       "summary": "",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
+        "Cabin Window Trade Study to fulfill MR&O & engineering requirements.",
+        "Assessed a wide range of impact: thermo, shapes, acoustics, structure, electromagnetic compatibility."
       ]
     }
   ],
   "volunteer": [
     {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
+      "organization": "",
+      "website": "",
+      "position": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
       "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
       ]
     },
     {
       "organization": "",
       "website": "",
-      "position": "Professional organization involvement",
+      "position": "Non-academic organization involvement",
       "startDate": "",
       "endDate": "",
       "summary": "",
       "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
+        "Road Eagles, half-marathon, Winter 2017"
       ]
     }
   ],
   "awards": [
     {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
+      "title": "Golden Key Society",
+      "date": "2019-Present",
+      "awarder": "",
+      "summary": ""
     },
     {
       "title": "First place",

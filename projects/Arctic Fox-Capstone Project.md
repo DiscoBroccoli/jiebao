@@ -14,6 +14,9 @@ labels:
 summary: A responsive web application for travel planning that my team developed in ICS 415.
 ---
 
+<p>Open a PDF file <a href="../downloads/Capstone-report.pdf">
+">example</a>.</p>
+
 <img class="ui large right floated rounded image" src="../images/Isentropic_Vortex2.gif">
 
 The toy equation showcased here is the isentropic vortex. As trivial as it may seem. Add van dyke pic The project helped me learn how to design and implement a responsive web site.
