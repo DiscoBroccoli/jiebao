@@ -4731,7 +4731,7 @@ input::selection {
 
 .ui.text.container {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  max-width: 700px !important;
+  max-width: 900px !important;
   line-height: 1.5;
 }
 

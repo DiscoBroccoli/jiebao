@@ -55,29 +55,28 @@ The beta symbol is the wave number and the sigma is the stability criteria. Fina
 
 
 <br />
-
+The Lax Wendroff finite difference scheme recovers the exact solution when the CFL number is equal
+to 1. For smaller value of CFL, the error remains bounded.
 <div align="center">
   <img class="ui image" src="../images/FDM2_1.png">
 </div>
 
 <br />
-The Lax Wendroff finite difference scheme recovers the exact solution when the CFL number is equal
-to 1. For smaller value of CFL, the error remains bounded.
+
+
+The phase error is obtained with 
+<p align="center">
+<img src="../images/FDM/FDM-phase-error.gif">
+</p>
 
 <div align="center">
   <img class="ui image" src="../images/FDM2_2.png">
 </div>
 
 <br />
-The phase error is obtained with 
-<p align="center">
-<img src="../images/FDM/FDM-phase-error.gif">
-</p>
 
 
-We notice a lagging phase error for the Lax Wendroff scheme for CFL number 0.5, 0.6, and 0.7. How-
-ever, the higher CFL numbers, excluding 1, has predominantly leading phase error for larger wave
-numbers.
+We notice a lagging phase error for the Lax Wendroff scheme for CFL number 0.5, 0.6, and 0.7. However, the higher CFL numbers, excluding 1, has predominantly leading phase error for larger wave numbers.
 
 Similar to the amplification factor, the scheme has no phase error for CFL equal to 1.
 

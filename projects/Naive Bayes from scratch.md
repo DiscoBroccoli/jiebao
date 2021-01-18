@@ -3,7 +3,7 @@ layout: project
 type: project
 image: images/abalone.png
 title: Naive Bayes from scratch
-permalink: projects/abalone
+permalink: projects/abalones
 # All dates must be YYYY-MM-DD format!
 date: 2020-05-15
 labels:
@@ -15,12 +15,11 @@ summary: Explored 4 dataset - Ionosphere (Sigillito et al., 1989), Adult (Kohavi
 
 The title summarizes well the subject of this project. Implementation from scratch is the best way to truly understand a model (although intimidating initially). The project helped me learn how to apply data pre-processing and improve my Python programming skills.
 
-To showcase my work, I decided to present the prediction of the age of abalone being older than 9 years old or not given a set of physical
-measurements is a valuable task for both farmers and customers. To determine the price of
+<img class="ui medium right floated rounded image" src="../images/Log_scratch/abalone_hand.jpeg">
+
+This study shows the analysis of Gaussian naive Bayes to predict the abalone age <a href="https://www.researchgate.net/publication/337146276_Machine_Learning_Project_-_Predict_the_Age_of_Abalone">[Y. Han, 2019]</a>. The nature of labeling an abalone being older than 9 years old or not given a set of physical measurements is a valuable task for both farmers and customers. To determine the price of
 the shellfish, farmers estimate the abalone’s age by cutting the shells and counting the rings
-through the microscope, a very complex and costly method due to the variation in their size
-and growth characteristics. This study <a href="https://www.researchgate.net/publication/337146276_Machine_Learning_Project_-_Predict_the_Age_of_Abalone">[Y. Han, 2019]</a> shows the analysis of multiples classifiers used to
-predict the abalone age, including Gaussian Naive Bayes.
+through the microscope, a very complex and costly method due to the variation in their size and growth characteristics. 
 
 ## Naive Bayes Classifier
 We will first start with naive Bayes classifier (NBC). Recall, if the features are mutually-independent. Then NBC estimates the prior probabilities of each hypothesis and the probability of each instance. 
