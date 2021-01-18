@@ -5,13 +5,13 @@ image: images/Isentropic_Vortex2.gif
 title: Isentropic Vortex
 permalink: projects/Fluid-Sims
 # All dates must be YYYY-MM-DD format!
-date: 2015-12-15
+date: 2020-02-01
 labels:
   - Javascript
   - Meteor
   - MongoDB
   - GitHub
-summary: A responsive web application for travel planning that my team developed in ICS 415.
+summary: Selection of numerical and fluid simulation written in MATLAB. Isentropic vortex, 2D inviscid cylinder, multidimensional diffusion, lid-driven square cavity flow. 
 ---
 
 <img class="ui large right floated rounded image" src="../images/Isentropic_Vortex2.gif">
