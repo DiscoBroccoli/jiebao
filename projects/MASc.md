@@ -14,6 +14,8 @@ labels:
 summary: MASc research on artificially intelligent turbulence models built using direct numerical simulation.
 ---
 
+## Introduction soon to come...
+
 <div align="center">
   <img class="ui image" src="../images/Production.gif">
 </div>

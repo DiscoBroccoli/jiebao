@@ -14,4 +14,6 @@ labels:
 summary: 
 ---
 
+## Introduction soon to come...
+<embed src="../downloads/Capstone-report.pdf" type="application/pdf" width="1000px%" height="1000px">
 <p>The complete Report can be found <a href="../downloads/Capstone-report.pdf">here</a>.</p>
