@@ -15,11 +15,11 @@ summary: MASc research on artificially intelligent turbulence models built using
 ---
 
 ## <i>Introduction</i>
-The ubiquitous nature of turbulence is all around us. It influences many aspect of our every daily life. The air flowing in and out of our lungs is turbulent, as is the invisible air in the room in which you sit. Turbulent boundary layers dictate the vehicle's performance whether it's in the air or on the ground. Even the Earth's outer core of molten iron is turbulent, and it is this chaotic behaviour which maintains the terrestrial magnetic field against solar flares.
+The ubiquitous nature of turbulence is all around us. It influences many aspect of our every daily life. The air flowing in and out of our lungs is turbulent, as is the invisible air in the room in which you sit. Turbulent boundary layers dictate the vehicle performance whether it's in the air or on the ground. Even the Earth's outer core of molten iron is turbulent, and it is this chaotic behaviour which maintains the terrestrial magnetic field against solar flares.
 
 Needless to say, to hold a predictive model of turbulence would be paramount for the next step in human evolution. 
 
-Our closest attempt to "<i>cage the beast</i>" is the direct numerical simulation (DNS). In theory, these type of simulations mimic the flow field down to the smallest eddy. However, they are tremendously expansive computational wise. Its greed exponentially with the Reynolds number, assuming computing rate of 1 gigaflop the time in days is (Pope, 2000): 
+Our closest attempt to "<i>cage the beast</i>" is the direct numerical simulation (DNS). In theory, these type of simulations mimic the flow field down to the smallest eddy. However, they are tremendously expansive computational wise. Its greediness grow with the Reynolds number, assuming computing rate of 1 gigaflop the time in days is (Pope, 2000): 
 
 <br />
 
@@ -48,7 +48,7 @@ predictions. This is due to the elusive anisotropic nature of the eddy viscosity
 </div>
 
 
-The simulation showcased above below is a direct numerical simulation (DNS) of the canonical wall bounded turbulent channel case. In which the whole spatial and temporal spectrum are solved for accurate turbulence prediction. The showcased simulation is from the dimensionless shear Reynolds of 180. The bulk Reynolds is found using the relationship from [Dean(1978)](https://ui.adsabs.harvard.edu/abs/1974STIN...7522638D/abstract).
+The simulation showcased above is a direct numerical simulation (DNS) of the canonical wall bounded turbulent channel case. In which the whole spatial and temporal spectrum are solved for accurate turbulence prediction. The showcased simulation is from the dimensionless shear Reynolds of 180. The bulk Reynolds is found using the relationship from [Dean(1978)](https://ui.adsabs.harvard.edu/abs/1974STIN...7522638D/abstract).
 
 <div align="center">
   <img class="ui image" src="../images/MASc/re_bulk.gif">
@@ -128,20 +128,46 @@ def get_data_validation(self, test: bool = False) -> Tuple[pd.DataFrame, pd.Data
 
 def _set_standardize_values_validation(self, test):
     # we do not standardize the test labels
-    df = self.get_continuous_data()[0]
+    df = self.get_data_validation(test)[0]
     self.means = df.mean()
     self.stds = df.std()
     df = (df - self.means) / self.stds
     return df
 ```
-
-At the time of writing this, more physics based solution are being tested. Such as replacing a layer's bias to the corresponding shear Reynolds Number of the training instance. Add more physics based features such as the wall shear velocity. <b> The intuition is to give the machine learning training a higher-level of understanding. </b>
-
+As mentionned previously about the vanishing auto-correlation values in the center region of the channel. To ease the process, the model will learn from y/d = 0 to y/d = 0.8. 
 ### MLP Architecture
+
+For each case, we randomly split the training data into 80% training and 20% validation data. The loss function used is the mean squared error (MSE) between the predicted production and the DNS value. The Adam optimization ([Kingma, D. P. et al., 2014](https://arxiv.org/abs/1412.6980)) is used with an inital learning rate of 10^-6 and a batch size of 10. The weights of the networks were initialized with He uniform ([He, K., et al., 2015](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwits8eqhafuAhUHEFkFHXHOAMoQFjAAegQIBRAC&url=https%3A%2F%2Farxiv.org%2Fpdf%2F1604.04112&usg=AOvVaw1ptgdqZeST3Jb2TylAgX_i)) and biases were initialized as zeros. To prevent over-fitting our model, a regularization callback is imposed on the loss function.
+
 
 <div align="center">
   <img class="ui image" src="../images/MASc/table_cases.png">
 </div>
+
+<br />
+
+The training stops when both the validation loss starts to rise and the patience argument is invoked. In machine learning, the increase of validation loss is a strong indicator for over-fitting ([Goodfellow, I., et al., 2016](https://www.deeplearningbook.org/)). Other model's epoch ranged between 3000-7000. The figure below shows an example of training and validation loss as a function of epochs during a training of 100-Neurons-MLP for case 1.
+
+<div align="center" >
+  <img class="ui image" src="../images/MASc/loss.png" width="70%" height="70%">
+</div>
+
+<br />
+
+The R2 score is a statistical measure that determines how well a regression prediction approximates the true data points. An R2 of 1 indicates a perfect fit. Comparing accross the three cases from the table below, we notice Case 1 has considerably better accuracy. One explanation for this is that Case 2 & 3 prediction zone is outside of the training range. Furthermore, the reason Case 3 has the worst outcome might stem from the fact the training dataset yields low-Reynolds number effect ([Moser,K. et al., 1999](:16
+https://cfd.spbstu.ru/agarbaruk/doc/1999_Moser-Kim-Mansour_Direct-numerical-simulation-of-turbulent-channel-flow-up-to-Re-590.pdf)).
+
+<br />
+
+<div align="center">
+  <img class="ui image" src="../images/MASc/table_results.png">
+</div>
+
+<br />
+
+At the time of writing this, more physics based solution are being tested. Such as replacing a layer's bias to the corresponding shear Reynolds Number of the training instance. Add more physics based features such as the wall shear velocity. <b> The intuition is to give the machine learning training a higher-level of understanding. </b> 
+
+<i> <b> Work in progress </b> </i>
 
 You can see the Python code on my<a href="https://github.com/DiscoBroccoli/Turbulent-Modelling-using-Machine-Learning-Techniques"><i class="large github icon"></i>Github repo </a>(soon to come...).
 
@@ -154,6 +180,15 @@ Sources:
 
 * S. Ioffe and C. Szegedy, “Batch normalization: Accelerating deep network training by reducing
 internal covariate shift,” 2015.
+
+* Kingma, Diederik P. and Jimmy Ba. “Adam: A Method for Stochastic Optimization.” CoRR abs/1412.6980 (2015): n. pag.
+
+* He, K., Zhang, X., Ren, S. and Sun, J. (2015). Delving deep into rectiers: Surpassing human-level performance
+on imagenet classication. In Proceedings of the IEEE international conference on computer vision, pp. 1026{1034.
+
+* Goodfellow, I., Bengio, Y., Courville, A. and Bengio, Y. (2016). Deep learning, vol. 1. MIT press Cambridge.
+
+* Moser, Robert & Kim, John & Mansour, Nagi. (1999). Direct Numerical Simulation of Turbulent Channel Flow up to Re??=590. Physics of Fluids - PHYS FLUIDS. 11. 943-945. 10.1063/1.869966.
 
 
 

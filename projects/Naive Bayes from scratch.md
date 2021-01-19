@@ -104,9 +104,9 @@ the unseen test split for all data sets. The model was first validated using 5 f
 To view the result on the other dataset I welcome you to visit my <a href="https://github.com/DiscoBroccoli/logistic-regression-and-naive-Bayes-from-Scratch"><i class="large github icon"></i>Github repo</a>.
 
 # Sources
-S. Ioffe and C. Szegedy, “Batch normalization: Accelerating deep network training by reducing
+- S. Ioffe and C. Szegedy, “Batch normalization: Accelerating deep network training by reducing
 internal covariate shift,” 2015.
 
-Y. Han, Machine Learning Project - Predict the Age of Abalone. PhD thesis, 06 2019.
+- Y. Han, Machine Learning Project - Predict the Age of Abalone. PhD thesis, 06 2019.
 
 
