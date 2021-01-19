@@ -137,7 +137,7 @@ def _set_standardize_values_validation(self, test):
 As mentionned previously about the vanishing auto-correlation values in the center region of the channel. To ease the process, the model will learn from y/d = 0 to y/d = 0.8. 
 ### MLP Architecture
 
-For each case, we randomly split the training data into 80% training and 20% validation data. The loss function used is the mean squared error (MSE) between the predicted production and the DNS value. The Adam optimization ([Kingma, D. P. et al., 2014](https://arxiv.org/abs/1412.6980)) is used with an inital learning rate of 10^-6 and a batch size of 10. The weights of the networks were initialized with He uniform ([He, K., et al., 2015](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwits8eqhafuAhUHEFkFHXHOAMoQFjAAegQIBRAC&url=https%3A%2F%2Farxiv.org%2Fpdf%2F1604.04112&usg=AOvVaw1ptgdqZeST3Jb2TylAgX_i)) and biases were initialized as zeros. To prevent over-fitting our model, a regularization callback is imposed on the loss function.
+For each case, we randomly split the training data into 80% training and 20% validation data. The loss function used is the mean squared error (MSE) between the predicted production and the DNS value. The Adam optimization ([Kingma, D. P. et al., 2014](https://arxiv.org/abs/1412.6980)) is used with an inital learning rate of 10^-6 and a batch size of 10. The weights of the networks were initialized with He uniform ([He, K., et al., 2015](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwits8eqhafuAhUHEFkFHXHOAMoQFjAAegQIBRAC&url=https%3A%2F%2Farxiv.org%2Fpdf%2F1604.04112&usg=AOvVaw1ptgdqZeST3Jb2TylAgX_i)) and biases were initialized as zeros. To prevent over-fitting our model, a regularization callback is imposed on the loss function and batch normalization is implemented to accelerate the training.
 
 
 <div align="center">
@@ -155,7 +155,7 @@ The training stops when both the validation loss starts to rise and the patience
 <br />
 
 The R2 score is a statistical measure that determines how well a regression prediction approximates the true data points. An R2 of 1 indicates a perfect fit. Comparing accross the three cases from the table below, we notice Case 1 has considerably better accuracy. One explanation for this is that Case 2 & 3 prediction zone is outside of the training range. Furthermore, the reason Case 3 has the worst outcome might stem from the fact the training dataset yields low-Reynolds number effect ([Moser,K. et al., 1999](:16
-https://cfd.spbstu.ru/agarbaruk/doc/1999_Moser-Kim-Mansour_Direct-numerical-simulation-of-turbulent-channel-flow-up-to-Re-590.pdf)).
+https://cfd.spbstu.ru/agarbaruk/doc/1999_Moser-Kim-Mansour_Direct-numerical-simulation-of-turbulent-channel-flow-up-to-Re-590.pdf)). Thus, a solution would be to include training data of higher Reynolds to balance the effect of low and high Reynolds number.
 
 <br />
 
@@ -181,12 +181,20 @@ Sources:
 * S. Ioffe and C. Szegedy, “Batch normalization: Accelerating deep network training by reducing
 internal covariate shift,” 2015.
 
+<br />
+
 * Kingma, Diederik P. and Jimmy Ba. “Adam: A Method for Stochastic Optimization.” CoRR abs/1412.6980 (2015): n. pag.
+
+<br />
 
 * He, K., Zhang, X., Ren, S. and Sun, J. (2015). Delving deep into rectiers: Surpassing human-level performance
 on imagenet classication. In Proceedings of the IEEE international conference on computer vision, pp. 1026{1034.
 
+<br />
+
 * Goodfellow, I., Bengio, Y., Courville, A. and Bengio, Y. (2016). Deep learning, vol. 1. MIT press Cambridge.
+
+<br />
 
 * Moser, Robert & Kim, John & Mansour, Nagi. (1999). Direct Numerical Simulation of Turbulent Channel Flow up to Re??=590. Physics of Fluids - PHYS FLUIDS. 11. 943-945. 10.1063/1.869966.
 

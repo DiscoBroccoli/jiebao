@@ -7,18 +7,15 @@ permalink: projects/Fluid-Sims
 # All dates must be YYYY-MM-DD format!
 date: 2020-02-01
 labels:
-  - Javascript
-  - Meteor
-  - MongoDB
-  - GitHub
+  - MATLAB
+  - Discontinuous Galerkin 
+  - FDM
 summary: Selection of numerical and fluid simulation written in MATLAB. Isentropic vortex, 2D inviscid cylinder, multidimensional diffusion, lid-driven square cavity flow. 
 ---
-The toy equation showcased here is the isentropic vortex. As trivial as it may seem. Add van dyke pic The project helped me learn how to design and implement a responsive web site.
-
-
+The toy equation showcased here is the isentropic vortex. As trivial as it may seem. Add van dyke pics.
+ 
 <p align="center">
 <img src="../images/Isentropic_Vortex2.gif">
 </p>
 
-
-more coming soon...
+In the meanwhile visit my [Github repo](https://github.com/DiscoBroccoli/CFD-Simulation). More coming soon...
