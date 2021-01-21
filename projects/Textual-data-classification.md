@@ -91,6 +91,7 @@ extracting only these parts, we lose some of the inherent relationships between 
  <img class="ui medium left floated rounded image" src="../images/IMDB/hyperparameters.png">
 </p>
 
+### <b>To view the code I welcome you to visit my <a href="https://github.com/DiscoBroccoli/Textual-Data-Classification"><i class="large github icon"></i>Github repo</a></b>.
 
 Sources:
 

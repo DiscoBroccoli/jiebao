@@ -101,7 +101,7 @@ the unseen test split for all data sets. The model was first validated using 5 f
 </p>
 
 
-To view the result on the other dataset I welcome you to visit my <a href="https://github.com/DiscoBroccoli/logistic-regression-and-naive-Bayes-from-Scratch"><i class="large github icon"></i>Github repo</a>.
+### To view the result on the other dataset I welcome you to visit my <b><a href="https://github.com/DiscoBroccoli/logistic-regression-and-naive-Bayes-from-Scratch"><i class="large github icon"></i>Github repo</a></b>.
 
 # Sources
 - S. Ioffe and C. Szegedy, “Batch normalization: Accelerating deep network training by reducing
