@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: images/Isentropic_Vortex2.gif
+image: images/CFD-Selection/Isentropic_Vortex2.gif
 title: CFD Simulations
 permalink: projects/Fluid-Sims
 # All dates must be YYYY-MM-DD format!
