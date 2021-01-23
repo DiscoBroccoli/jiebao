@@ -59,6 +59,14 @@ The implementation uses a time-step and pseudo time-step of size 1.25e-2 & 2.5e-
 <img src="../images/CFD-Selection/2D_cylinder.gif">
 </p>
 
+The repeating pattern of swirling vortices are called vortex shedding and commonly known as von Kármán vortex street. They form downstream of a blunt body and can happen within a certain range of flow velocities. They are responsible for aeroelastic flutter which are of concern for bridges and skyscraper design.
+
+<p align="center">
+<img src="../images/CFD-Selection/von_karman.jpeg" width="70%" height="70%">
+</p>
+
+The image above shows the island, which is located a few hundred kilometers off the west coast of Mexico and the southern tip of Baja California, is part of the Revillagigedo Archipelago. 
+
 source: [Huynh, H.T.. (2007). A Flux Reconstruction Approach to High-Order Schemes Including Discontinuous Galerkin Methods. AIAA Paper AIAA 20074079. 1-42. ]
 
 ## Multidimensional Diffusion Equation

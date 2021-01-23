@@ -107,7 +107,7 @@ The dataset consists of 56 features, 1 continuous output, and 32 325 instances. 
 
 <br />
 
-Another aspect is from the mechanics of turbulence. A corollary is that the cross-correlation vanishes inside the unstrained turbulence. In the turbulence channel case, this corresponds to the region in the center of the channel. Albeit with a certain lag. Thus, it was decided to remove those features. 
+Another aspect is from the mechanics of turbulence. A corollary is that the cross-correlation vanishes inside the unstrained turbulence. In the turbulence channel case, this corresponds to the region in the center of the channel. Albeit with a certain lag. Thus, it was decided to remove those features. We are then left with:
  
 <div align="center">
   <img class="ui image" src="../images/MASc/features.gif" >
@@ -115,7 +115,7 @@ Another aspect is from the mechanics of turbulence. A corollary is that the cros
 
 <br />
 
-Once the features are determined, feature scaling is performed. Data transformation by [standardization ](https://arxiv.org/abs/1502.03167) is applied since it has been shown to speed up convergence via gradient descent and implicitly balances the contribution of all features. Standardization is also required for proper L2 regularization.
+Once the features are determined, feature scaling is performed. Data transformation by standardization is applied since it has been shown to speed up convergence via gradient descent and implicitly balances the contribution of all features. Standardization is also required for proper L2 regularization.
 
 ```js
 def get_data_validation(self, test: bool = False) -> Tuple[pd.DataFrame, pd.DataFrame]:
