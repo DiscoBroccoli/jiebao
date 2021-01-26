@@ -98,7 +98,14 @@ Another important disctinction is the compressibility of the fluid. We know for 
 
 ## Turbulence Modeling with Tensorflow
 
-### Data Pre-processing
+### Procedure to generate the turbulence model 
+
+<div align="center">
+  <img class="ui image" src="../images/MASc/strats.png" width="80%" height="80%">
+</div>
+
+
+### Data Preprocessing
 
 The dataset consists of 56 features, 1 continuous output, and 32 325 instances. All features are complete with no missing values. Notice the high number of features. To filter out the unecessary features, we must remember the end goal of the machine learning approach; to improve the RANS solver. This means we are limited to the same input. In other words, the dataset (production and dissipation) are extracted from the DNS of the Turbulent Channel. As such, the Reynolds stress is known but not in the RANS in framework. The plot below is an implementation of the Relief algorithm for regression problem with all the features that would be available.
 
