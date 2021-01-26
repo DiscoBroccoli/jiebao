@@ -11,7 +11,7 @@ labels:
   - Stability
   - NCADE
   - V&V
-summary: 
+summary: Preliminary Conceptual Design of a arctic cargo plane with the mission to  deliver  consumer  and  commercial  goods  such as food,  clothing, fuel and potentially vehicles to Canada’s northern remote communities
 ---
 
 In 2019, the aerospace senior students has received a Request for Proposal (RFP) from the NSERC Chair in Aerospace Design Engineering (NCADE). The mandate is to develop a conceptual design for a new aircraft.
@@ -55,9 +55,32 @@ As  seen  in the picture above. A payload-range  diagram was then constructed  a
 #  PRELIMINARY DESIGN AND V&V
 ## Aircraft Performance
 
-The positions and weights of components resulted in a most aft CG of 69.25%MAC from the wing leading edge when flying with maximum payload and minimum fuel,while the most forward CG is at 41.06% MAC when flying with one full pallet of cargo in themost forward position and minimum fuel. In order to avoid instability during cargo loadingand unloading, the main landing gears were positioned behind the most aft CG on ground, which was calculated to be 86.79% MAC. The range of flight CG limits falls within the longitudinal CG envelopeand the landing gear limits.
+The positions and weights of components resulted in a most aft CG of 69.25%MAC from the wing leading edge when flying with maximum payload and minimum fuel,while the most forward CG is at 41.06% MAC when flying with one full pallet of cargo in themost forward position and minimum fuel. In order to avoid instability during cargo loadingand unloading, the main landing gears were positioned behind the most aft CG on ground, which was calculated to be 86.79% MAC. The range of flight CG limits falls within the longitudinal CG envelopeand the landing gear limits. 
 
 Using knowledge from <b> AERO 446-Aerospace Vehicle Performance </b>. From the MTOW of 38,405 lb, the balanced field length (BFL) of the aircraft at sea level and standard atmosphere on a gravel runway is 2,536 feet. Furthermore, the factored landing distance (FLD) of the  aircraft  at  sea  level  and  standardatmosphere  on  a  gravel  runway  increased  to  2,357  feet.
+
+In order to determine the balanced field length (BFL), the speeds and distances mustbe computed for the OEI takeoff and the AEO ASD and V1 must be found at which bothdistances  will  be  equal.   This  distance  is  known  as  the  BFL.  Each  case  is  separated  into multiple segments as shown figures below.
+
+<div align="center">
+  <img class="ui image" src="../images/Capstone/BFL1.png ">
+</div>
+
+
+<div align="center">
+  <img class="ui image" src="../images/Capstone/BFL2.png ">
+</div>
+
+Using regulations from <b> FAR 25.105 to 115 </b>, the lift and drag of the Arctic Fox, and the acceleration equation. Each segment's is acceleration,  speed,  time  and  distance is calculated. This  enables  the  determination  of  the  the  total distance corresponding to a certain value of V1(ranging between 80% and 100% of VR).  Thedetermination of the distance for the segments between VR,VLOF and V2 was done using the OEI gradient at V2 using the equation below.
+
+<div align="center">
+  <img class="ui image" src="../images/Capstone/eq1.gif ">
+</div>
+\\
+While V2 was found using the following.
+
+<div align="center">
+  <img class="ui image" src="../images/Capstone/eq2.gif ">
+</div>
 
 ##  Stability - Cruise Condition
 The handling qualities associated with the dynamic stability behaviour of the Arctic Foxwere  assessed  to  complement  the  stability  study  from  the  conceptual  design  phase.   The longitudinal  dynamic  stability  of  the  aircraft  was  estimated  from  [5].  This proposed approximate method relates the physical layout of the plane to its handling qualities.  In other words, the Arctic Fox‘s physical layout is translated into a state-space motion matrix which is then solved using the approximate method and a MATLAB toolset.  The latter method allows the obtention of the undamped natural frequency and the damping ratio of the Arctic Fox.  In turn, the handling qualities of the short and long periodmay be assessed.  The results are as shown below.
