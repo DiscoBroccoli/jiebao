@@ -11,7 +11,7 @@ labels:
   - Stability
   - NCADE
   - V&V
-summary: Preliminary Conceptual Design of a arctic cargo plane with the mission to  deliver  consumer  and  commercial  goods  such as food,  clothing, fuel and potentially vehicles to Canada’s northern remote communities
+summary: Preliminary Conceptual Design of an arctic cargo plane with the mission to  deliver  consumer  and  commercial  goods  such as food,  clothing, fuel and potentially vehicles to Canada’s northern remote communities
 ---
 
 In 2019, the aerospace senior students has received a Request for Proposal (RFP) from the NSERC Chair in Aerospace Design Engineering (NCADE). The mandate is to develop a conceptual design for a new aircraft.
