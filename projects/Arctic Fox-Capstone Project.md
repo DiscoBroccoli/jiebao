@@ -13,7 +13,25 @@ labels:
   - V&V
 summary: Preliminary Conceptual Design of an arctic cargo plane with the mission to  deliver  consumer  and  commercial  goods  such as food,  clothing, fuel and potentially vehicles to Canada’s northern remote communities
 ---
+<style>
+* {
+  box-sizing: border-box;
+}
 
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
 In 2019, the aerospace senior students has received a Request for Proposal (RFP) from the NSERC Chair in Aerospace Design Engineering (NCADE). The mandate is to develop a conceptual design for a new aircraft.
 
 <img class="ui medium right floated rounded image" src="../images/Capstone/Picture3.png"> 
@@ -25,6 +43,15 @@ Given that these obstacles must be resolved prior to introducing UAVs,  we have 
 <div align="center">
   <img class="ui image" src="../images/Capstone/artic_fox_background.png " width="70%" height="70%">
 </div>
+
+ <div class="row">
+  <div class="column">
+    <img src="../images/Capstone/OET.gif" alt="One engine take-off" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../images/Capstone/Landing.gif" alt="Landing" style="width:100%">
+  </div>
+</div> 
 
 <br />
 
