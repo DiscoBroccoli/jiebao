@@ -29,22 +29,28 @@
   },
   "interests": [
     {
-      "name": "computational fluids ",
+      "name": "data mining and analysis",
+      "keywords": [
+      ]
+    },
+    {
+      "name": "ML",
+      "keywords": [
+	"turbulence modelling", "RANS"
+      ]
+    },
+    {
+      "name": "CFD",
       "keywords": [
       ]
     },
     {
       "name": "cardiovascular engineering",
       "keywords": [
-	"turbulence modelling", "RANS"
-      ]
-    },
-    {
-      "name": "artificial intelligence",
-      "keywords": [
       ]
     }
   ],
+
   "skills": [
     {
       "name": "Languages and Frameworks",
