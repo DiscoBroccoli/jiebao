@@ -144,7 +144,29 @@ def _set_standardize_values_validation(self, test):
     df = (df - self.means) / self.stds
     return df
 ```
-As mentionned previously about the vanishing auto-correlation values in the center region of the channel. To ease the process, the model will learn from y/d = 0 to y/d = 0.8. 
+As mentionned previously about the vanishing auto-correlation values in the center region of the channel. To ease the process, the model will learn from y/d = 0 to y/d = 0.8. Additionally, the the natural log of the dissipation will be taken as training label. This method accelerates the training.
+
+```js
+class Remove_firstlast:
+    def __init__(self):
+
+        reynolds = [180, 285, 395, 450, 590]
+
+        for Re in reynolds:
+            path = INTERPOL_DIR / f'interpolated_label_{Re}.xlsx'
+            self.label = self._remove_flF(path)
+            self.label = self.label.to_excel(f'interpolated_label_{Re}_case.xlsx', index=False)
+    
+    def _remove_flF(self, path) -> pd.DataFrame:
+        
+	print(f'Loading following dataset: {path}.')
+        df = pd.read_excel(path, engine='openpyxl')
+        # Taking only y/d value 0.8 and above
+        df = df[df['y/d_i'] <= 0.8]
+        # Creating new column with natural log of Dissipation
+        df.loc[df['y/d_i'] >= 0, 'log_Diss'] = -np.log(df['Diss'])
+        return df
+```
 ### MLP Architecture
 
 For each case, we randomly split the training data into 80% training and 20% validation data. The loss function used is the mean squared error (MSE) between the predicted production and the DNS value. The Adam optimization ([Kingma, D. P. et al., 2014](https://arxiv.org/abs/1412.6980)) is used with an inital learning rate of 10^-6 and a batch size of 10. The weights of the networks were initialized with He uniform ([He, K., et al., 2015](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwits8eqhafuAhUHEFkFHXHOAMoQFjAAegQIBRAC&url=https%3A%2F%2Farxiv.org%2Fpdf%2F1604.04112&usg=AOvVaw1ptgdqZeST3Jb2TylAgX_i)) and biases were initialized as zeros. To prevent over-fitting our model, a regularization callback is imposed on the loss function and batch normalization is implemented to accelerate the training.
@@ -177,13 +199,19 @@ https://cfd.spbstu.ru/agarbaruk/doc/1999_Moser-Kim-Mansour_Direct-numerical-simu
 
 At the time of writing this, more physics based solution are being tested. Such as replacing a layer's bias to the corresponding shear Reynolds Number of the training instance. Add more physics based features such as the wall shear velocity. <b> The intuition is to give the machine learning training a higher-level of understanding. </b> 
 
-<i> <b> Work in progress </b> </i>
+
 
 You can see the Python code on my<a href="https://github.com/DiscoBroccoli/Turbulent-Modelling-using-Machine-Learning-Techniques"><i class="large github icon"></i>Github repo </a>(soon to come...).
 
 
 <div align="center">
   <img class="ui image" src="../images/side-180.gif">
+</div>
+
+
+<i> <b> Work in progress </b> </i>
+<div align="center">
+  <img class="ui image" src="../images/MASc/NACA0012.png">
 </div>
 
 Sources:
