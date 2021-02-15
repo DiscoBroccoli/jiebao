@@ -161,7 +161,7 @@ class Remove_firstlast:
         
 	print(f'Loading following dataset: {path}.')
         df = pd.read_excel(path, engine='openpyxl')
-        # Taking only y/d value 0.8 and above
+        # Taking only y/d value 0.8 and below
         df = df[df['y/d_i'] <= 0.8]
         # Creating new column with natural log of Dissipation
         df.loc[df['y/d_i'] >= 0, 'log_Diss'] = -np.log(df['Diss'])
