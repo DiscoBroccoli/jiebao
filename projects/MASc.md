@@ -197,7 +197,7 @@ https://cfd.spbstu.ru/agarbaruk/doc/1999_Moser-Kim-Mansour_Direct-numerical-simu
 
 <br />
 
-At the time of writing this, more physics based solution are being tested. Such as replacing a layer's bias to the corresponding shear Reynolds Number of the training instance. Add more physics based features such as the wall shear velocity. <b> The intuition is to give the machine learning training a higher-level of understanding. </b> (coming soon...)
+At the time of writing this, more physics based solution are being tested. Such as replacing a layer's bias to the corresponding shear Reynolds Number of the training instance. Add more physics based features such as the wall shear velocity. <b> The intuition is to give the machine learning training a higher-level of understanding. </b> 
 
 
 
