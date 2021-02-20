@@ -139,5 +139,3 @@ The two CG cases represents the top of climb and top of descent scenario of the 
 [4]  “Nutrition  north  canada  advisory  board  second  report,”  2014.  [Online].  Available:https://www.nutritionnorthcanada.gc.ca/eng/1508938932551/1508938956924
 
 [5]   F. Stability and A. Control,Second Edition.    McGraw - Hill, 1998.
-
-[6] Phillips
