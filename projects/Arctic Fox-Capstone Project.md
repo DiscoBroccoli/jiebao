@@ -118,7 +118,7 @@ The handling qualities associated with the dynamic stability behaviour of the Ar
 
 <br />
 
-The two CG cases represents the top of climb and top of descent scenario of the flight.
+The two CG cases represents the top of climb and top of descent scenario of the flight. 
 
 <div align="center">
   <img class="ui image" src="../images/Capstone/Picture4.png " width="70%" height="70%" >
@@ -140,3 +140,4 @@ The two CG cases represents the top of climb and top of descent scenario of the 
 
 [5]   F. Stability and A. Control,Second Edition.    McGraw - Hill, 1998.
 
+[6] Phillips
