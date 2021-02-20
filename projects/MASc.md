@@ -201,7 +201,7 @@ At the time of writing this, more physics based solution are being tested. Such 
 
 
 
-You can see the Python code on my<a href="https://github.com/DiscoBroccoli/Turbulent-Modelling-using-Machine-Learning-Techniques"><i class="large github icon"></i>Github repo </a>(soon to come...).
+You can see the Python code on my<a href="https://github.com/DiscoBroccoli/Turbulent-Modelling-using-Machine-Learning-Techniques"><i class="large github icon"></i>Github repo </a>.
 
 
 <div align="center">
