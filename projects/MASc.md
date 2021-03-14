@@ -211,7 +211,11 @@ You can see the Python code on my<a href="https://github.com/DiscoBroccoli/Turbu
 
 <i> <b> Work in progress </b> </i>
 <div align="center">
-  <img class="ui image" src="../images/MASc/NACA0012.png">
+  <img class="ui image" src="../images/MASc/side_view.png">
+</div>
+
+<div align="center">
+  <img class="ui image" src="../images/MASc/airfoil_iso.png">
 </div>
 
 Sources:
