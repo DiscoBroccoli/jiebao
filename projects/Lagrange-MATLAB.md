@@ -112,5 +112,5 @@ Finally, another useful properties in DGM is the Weighted Residual method which 
 
 <br />
 
-
+If you want to know how to generate figures using PGF plots you can use the ton of ressources online at your disposition or you can contact me using jiebao995@gmail.com.
 
