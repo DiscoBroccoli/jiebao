@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Jie Bao",
-    "label": "MASc. Student & Research Assistant",
+    "label": "Data Engineer at CAE and M. Sc. Student in Computer Science",
     "picture": "https://discobroccoli.github.io/image-repoo/profil_300.jpg",
     "email": "jiebao995@gmail.com",
     "phone": "438-995-4178",
     "website": "https://jiebao.ca",
-    "summary": "I am working towards a Master of Applied Science in the Departement of Mechanical and Aerospace Engineering at Concordia University in Montreal, QC. Mae govannen, mellon nín!",
+    "summary": "I am working towards a Master of Science at Université de Montréal in partnership with MILA. Mae govannen, mellon nín!",
     "location": {
       "address": "",
       "postalCode": "",
@@ -29,7 +29,7 @@
   },
   "interests": [
     {
-      "name": "data mining and analysis",
+      "name": "Data Science",
       "keywords": [
       ]
     },
