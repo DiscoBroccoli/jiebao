@@ -13,13 +13,11 @@
   document.addEventListener("DOMContentLoaded", function() {
       var body = document.getElementsByTagName("body")[0];
       body.style.cssText =
-          'background: url("../images/jupiter.jpeg");' +
-          'background-size: auto;' +
-          'background-position: center;' +
-          'background-repeat: no-repeat;';
+          'background: url("../images/jupiter.jpeg") no-repeat center center fixed;' + 
+          'background-size: cover;';
       var uhbtns = document.getElementsByClassName("uhbtn");
       for(var i = 0; i < uhbtns.length; i++) {
-          uhbtns[i].cssText = "background-color: green;";
+          uhbtns[i].style.backgroundColor = "green";
       }
   });
 </script>
