@@ -12,7 +12,7 @@ labels:
 
 ## Consistency, Stability, and Convergence
 
-Numerical fluid solvers are sensitive tools. Predicting the chaotic behavior of a fluid is no joke. That is why a good numerical methods requires consistency, stability, and convergence. The scheme is consistent if the error between the PDE and the FDM vanishes as the mesh size is refined. In other words, it recovers the exact PDE in the limit that 
+Numerical fluid solvers are sensitive tools. Predicting the chaotic behavior of a fluid is not trivial. That is why a good numerical methods requires consistency, stability, and convergence. The scheme is consistent if the error between the PDE and the FDM vanishes as the mesh size is refined. In other words, it recovers the exact PDE in the limit that 
 <p align="center">
 <img src="../images/FDM/FDM-stability-consistent.gif">
 </p>
