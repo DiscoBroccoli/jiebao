@@ -12,86 +12,80 @@ labels:
   - Multiple Importance Sampling
 summary: Implementation from scratch of a Path tracer for global illumination. Scenes include MIS on Veach's experiment, Stanford Bunny, and Cornell Box.
 ---
-<img class="ui medium right floated rounded image" src="../images/IMDB/IMDB_review.jpeg">
+# Rendered Image Showcase
 
-This study presents a comparison between supervised learning algorithms to classify textual data with a focus on the performance of seven classifiers, namely Logistic Regression, Decision Trees, Support Vector Machines (SVM), AdaBoost, Random Forests, Naive Bayes and Multilayer Perceptrons (MLP). Each model was trained to predict categorical labels on the IMDB Reviews data set [Maas, 2011] for binary classification. After hyperparameter optimization with 5-fold cross-validation and Grid Search, MLP and SVM achieved the highest test accuracy of 88.15% for the IMDB Reviews dataset.
+Welcome to the Rendered Image Showcase, where I display a variety of computer-generated images that demonstrate different rendering techniques and sampling processes.
 
-## Data Pre-processing
-The large movie review dataset consists of 50,000 highly polar reviews from the IMDB website,
-classified as half positive and half negative, with a 50% training and testing split. Each entry
-is a single-lined text file containing a raw review. The preprocessing of the reviews consisted of
-lower-casing the raw text and removing break tags so that the texts can be tokenized to create the
-feature vectors.
+## Phong interpolation and anti-aliasing
+While implementing a progressive renderer, I noticed that the image quality was poor due to aliasing. The "jaggies" artifact on the outline of the sphere. This appearance stems from ray tracing through the center of each square pixel. This happens if the geometry details of the scene are smaller than the size of a single pixel, or if they change significantly from one pixel to the next, then the pixel grid doesn't have a high enough resolution to accurately capture these details.
 
-```js
-def clean_review(review):   
-	replacements = {
-		'<br />': ' '
-		}
-	regexp = re.compile('|'.join(map(re.escape, replacements)))    
-	return regexp.sub(lambda match: replacements[match.group(0)], review)
+To illustrate, I rendered two spheres using 20 samples per pixel. On the left I have an implicit sphere function that is rendered using ray-sphere intersection. On the right ray-triangle intersections. Additionally, each coordinate is mapped to a colour channel. The result are colours that represent the surface normal.
 
-```
-### Bag of Words & TF-IDF
-Because the algorithms cannot interpret text data directly, the Bag of Words technique was applied
-to extract features for use in the models. Each text document is represented by a fixed-length
-numerical vector by counting the frequency of each word. By applying Term Frequency-Inverse
-Document Frequency (TF-IDF), using TfidfVectorizer from SciKit-Learn, to find the most suitable
-features to describe each category. It measures the importance of each word to a document relative
-to a collection of documents by comparing the word frequency in a document with the specificity
-of the term (i.e. inversely proportional to its frequency in all documents). With respect to the
-specificity, limitating the maximum document frequency of each word to 25% of the documents.
-This filters out common words that do not provide information on the class labels.
+<div align="center">
+  <img class="ui image" src="../images/GI/render-20spp_og.png" style="width:500px; height:auto;">
+</div>
 
-### Tokenization: Stop words, Lemmatization & N-Grams
+*This image renders two spheres using 20 samples per pixel to illustrate the "jaggies" on light and shadow.*
 
-For the tokenization process, the features are cleaned and extracted from the input data set by removing
-the stop words, i.e. commonly used words in the English language. Examples of stop words include
-"and", "the" and "is". Similarly, many English words appeared in the data set in inflected forms.
-Therefore, two words may be written in different ways to express the same meaning. To mitigate
-the issue, lemmatization technique is used, from  <a href="https://spacy.io/">[spaCy]</a>, which performs a dictionary
-lookup to remove the inflectional endings. Lemmatizaion is a popular technique in NLP and a
-team of researchers applied this technique to process biomedical text <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3359276/">[Liu H. et al., 2012]</a>. Finally, tokenizing with n-grams, a sequence of n adjacent words, to consider the context pertaining to words.
-More specifically, tokenizing with bigrams to extract a sequence of words as a feature.
+To enhance the visual quality of the rendered scene, I've employed two critical techniques:
 
-```js
-if lemma:
-  vectorizer = TfidfVectorizer(tokenizer=LemmaTokenizer(), strip_accents="unicode", lowercase=True,
-               stop_words=['english'], max_features=20000, max_df=0.25)
-elif bigram:
-  vectorizer = TfidfVectorizer(strip_accents="unicode", lowercase=True, stop_words=['english'],
-               max_features=20000, max_df=0.25, token_pattern=r'(?u)\b[A-Za-z]\w+\b',
-               ngram_range=(1, 2))
-else:
-  vectorizer = TfidfVectorizer(strip_accents="unicode", lowercase=True, stop_words=['english'],
-               max_features=20000, max_df=0.25, token_pattern=r'(?u)\b[A-Za-z]\w+\b')
-```
+- **Anti-aliasing**: Utilizing a *jittered sampling* technique, the algorithm randomly samples within each pixel's area. This randomness, achieved by uniformly picking a location within the pixel, helps to smooth out the 'jaggies' and produces a more refined image.
 
-## Results
 
-The SVM has the highest validation accuracy of 88.9% for the IMDB Reviews dataset. When looking at the test precision, recall and F1 scores, the SVM is the overall best performing model for the IMDB Reviews dataset.
-<p align="center">
- <img class="ui Large right floated rounded image" src="../images/IMDB/results.png">
-</p>
+- **Phong Interpolation**: By taking a weighted average of the surface normals at the vertices of a triangle, the algorithm computes a precise surface normal at the intersection point. This interpolation uses *barycentric coordinates* to blend the normals, resulting in more realistic shading across the surface.
 
-The preprocessing work of mapping the textual input data into efficient real valued vector
-is a vital step in any text classification problem. One attempt was to introduce lemmatization
-and bigrams during the tokenization process. Another attempt was conducted using part-ofspeech
-tagger (POS), where for each input a chunking function was parsed. Mainly, we decided
-to extract nouns with their descriptive counterparts, such as verbs and adverbs.
 
-<p align="center">
- <img class="ui Large left floated rounded image" src="../images/IMDB/models.png">
-</p>
+<div align="center">
+  <img class="ui image" src="../images/GI/render-20spp_aa.png" style="width:500px; height:auto;">
+</div>
 
-Both methods did not improve the models in practice, most likely due to information loss. Namely, we noticed
-the vocabularies between some categories are sometimes familiar and not distinct enough, so by
-extracting only these parts, we lose some of the inherent relationships between words.
-<p align="center">
- <img class="ui medium left floated rounded image" src="../images/IMDB/hyperparameters.png">
-</p>
+*Notice the disappearance of jaggies on the right sphere and much better highlight due to phong shading*
 
-### <b>To view the code I welcome you to visit my <a href="https://github.com/DiscoBroccoli/Textual-Data-Classification"><i class="large github icon"></i>Github repo</a></b>.
+## Stanford Bunny
+
+Using the same techniques described above we can apply it to the Standford Bunny model. The result is a much more refined image with smooth shading and no jaggies.
+
+<div align="center">
+  <img class="ui image" src="../images/GI/stanford_bunny.png" style="width:400px; height:auto;">
+</div>
+
+*The Stanford Bunny is a common 3D test model.*
+
+## Glossy Surface Rendering with 3 Bounces - Cornell Box
+
+<div align="center">
+  <img class="ui image" src="../images/GI/EXPLICIT_3BOUNCES_1024_glossyspp.png" style="width:600px; height:auto;">
+</div>
+
+*This image showcases a glossy surface with precise light reflection. It uses 1024 samples per pixel (spp) to achieve a high level of detail.*
+
+## 3 Light Source Glossy Surface Rendering with 4 Bounces - Cornell Box
+
+<div align="center">
+  <img class="ui image" src="../images/GI/EXPLICIT_4BOUNCES_1024_glossyspp_3_colours.png" style="width:600px; height:auto;">
+</div>
+
+*This image showcases a glossy surface with precise light reflection. It uses 1024 samples per pixel (spp) to achieve a high level of detail.*
+
+## Multiple Importance Sampling
+
+<div align="center">
+  <img class="ui image" src="../images/GI/MIS_SMAPLING_514_50SPP.png" style="width:400px; height:auto;">
+</div>
+
+*Utilizing 50 samples per pixel, this image demonstrates the multiple importance sampling technique to balance different types of light paths.*
+
+## Low Sample Light Rendering
+<div align="center">
+  <img class="ui image" src="../images/GI/render-light-5spp.png" style="width:400px; height:auto;">
+</div>
+
+*With just 5 samples per pixel, this image exhibits how low sample counts affect the visibility and clarity of light sources.*
+
+
+## Next Steps
+- GPU acceleration using CuPy
+---
 
 Sources:
 
