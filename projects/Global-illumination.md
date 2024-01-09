@@ -12,7 +12,7 @@ labels:
   - Multiple Importance Sampling
 summary: Implementation from scratch of a Path tracer for global illumination. Scenes include MIS on Veach's experiment, Stanford Bunny, and Cornell Box.
 ---
-# Rendered Image Showcase
+# Rendered Image Showcase [WORK IN PROGRESS]
 
 Welcome to the Rendered Image Showcase, where I display a variety of computer-generated images that demonstrate different rendering techniques and sampling processes.
 
