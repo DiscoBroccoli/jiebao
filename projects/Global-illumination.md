@@ -85,10 +85,12 @@ Using the same techniques described above we can apply it to the Standford Bunny
 
 ## Next Steps
 - GPU acceleration using CuPy
+
+Codebase on request.
+
 ---
 
-Sources:
+## References
 
-B. W. J. V. K. Liu H, Christiansen T, “Biolemmatizer: a lemmatization tool for morphological
-processing of biomedical text,” Journal of Biomedical Semantics, Apr 2012.
+Physically Based Rendering: From Theory to Implementation. From https://pbrt.org/
 
