@@ -29,7 +29,7 @@ To make it simple. There is something called locus of control. Apparently I have
 </p> -->
 
 <p align="center">
-<img class="ui large center floated image" src="../images/Diary/traversier.jpg">
+<img class="ui large center floated image" src="../images/Diary/traversier_new.jpg">
 </p>
 
 Looking back, I see my stoic self as a trauma response. Sigh... Let's talk about something else.
