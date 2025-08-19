@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Jie Bao",
-    "label": "Data Engineer at CAE and M. Sc. Student in Computer Science",
+    "label": "Research Intern in Multimedia Lab at ETS",
     "picture": "https://discobroccoli.github.io/image-repoo/profil_300.jpg",
     "email": "jiebao995@gmail.com",
     "phone": "438-995-4178",
     "website": "https://jiebao.ca",
-    "summary": "I am working towards a Master of Science at Université de Montréal in partnership with MILA. Mae govannen, mellon nín!",
+    "summary": "Working towards differentiable rendering in partnership with MILA. Mae govannen, mellon nín!",
     "location": {
       "address": "",
       "postalCode": "",
@@ -29,23 +29,23 @@
   },
   "interests": [
     {
-      "name": "Data Science",
+      "name": "Film camera",
       "keywords": [
       ]
     },
     {
-      "name": "ML",
+      "name": "River Surfing",
       "keywords": [
 	"turbulence modelling", "RANS"
       ]
     },
     {
-      "name": "CFD",
+      "name": "Pastries",
       "keywords": [
       ]
     },
     {
-      "name": "Business Intelligence",
+      "name": "Caustics",
       "keywords": [
       ]
     }
