@@ -17,7 +17,7 @@ Talking about stuff that worries me. I wanted to share I have been humbled. I al
 
 And according to my therapist. "Not quite"...
 
-To make it simple. There is something called locus of control. Apparently I have a strong internal locus of control paired with the conditionning of associating hard work and suffering and success. I remember from a podcast with conan sharing the same feeling. Conan:" I hate... I hate... that it fucking works". I swear if I have the chance to appear on Fan Corrections I would tell them about the difference between correlation and causation. This is such a simple thought but made quite an impact on my mental health and growth.
+To make it simple. There is something called locus of control. Apparently I have a strong internal locus of control paired with the conditionning of associating hard work and suffering and success. I remember from a podcast with Conan and guest Stephen Colbert sharing the same feeling. Conan:" I hate... I hate... that it fucking works". I swear if I have the chance to appear on Fan Corrections I would tell them about the difference between correlation and causation. This is such a simple thought but made quite an impact on my mental health and growth.
 
 
 <!-- <p align="center">
