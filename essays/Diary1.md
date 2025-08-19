@@ -32,7 +32,7 @@ To make it simple. There is something called locus of control. Apparently I have
 <img class="ui large center floated image" src="../images/Diary/traversier_new.jpg">
 </p>
 
-Looking back, I see my stoic self as a trauma response. Sigh... Let's talk about something else.
+Looking back, I see my stoic self as a trauma response. You know, I think I feel pretty down how it affected my personal life.
 
 Remember when I mentionned Tadoussac? Here is a pic taken from the traversier to Tadoussac. I used my new camera, Minolta Maxxum STsi. A vintage film camera from the 80s that I found in a fleece market. The image are very sharp, I love it.
 
