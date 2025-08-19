@@ -15,7 +15,7 @@ labels:
 
 Talking about stuff that worries me. I wanted to share I have been humbled. I always been a stoic, as far as being given the title of the most chill guy in my high school year book. These iron curtains made me feel secure. To be honest I was even proud of this trait. This and my capacity to be never angry would be part of my D&D character sheet. Contributing to my wisdom and +2 modifier on saving throws from mind control (I have been playing a lot of bg3). Back to the subject, I am referring to my stress triggers. It's a low moment in my adult life... my stress limit have been put to the test. On paper it looks like I’m piling on: corporate full time job, school project, paper presentation every two weeks. Am I attracted to a busy schedule and jungling between different commitements? 
 
-And according to my therapist. "Not quite. You're simply working toward your dream.". I felt a relief so high I wanted to laugh at myself for believing something was wrong with me.
+And according to my therapist. "Not quite. You're simply working toward your dream.". I felt a relief so high and sudden I wanted to laugh at my own stupidity.
 
 To make it simple. There is something called locus of control. Apparently I have a strong internal locus of control paired with the conditionning of associating hard work and suffering and success. I remember from a podcast with Conan and guest Stephen Colbert sharing the same feeling. Conan:" I hate... I hate... that it fucking works". I swear if I have the chance to appear on Fan Corrections I would tell them about the difference between correlation and causation. This is such a simple thought but made quite an impact on my mental health and growth.
 
