@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: 4 Months Later
+title: 2 Years Later
 # All dates must be YYYY-MM-DD format!
 date: 2025-08-18
 labels:
