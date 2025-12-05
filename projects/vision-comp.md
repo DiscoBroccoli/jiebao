@@ -3,6 +3,7 @@ layout: project
 type: project
 image: images/CIFAR-10/CIFAR-10.png
 title: Computer Vision - CIFAR-10
+published: False
 permalink: projects/CIFAR-10
 # All dates must be YYYY-MM-DD format!
 date: 2020-10-02

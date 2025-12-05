@@ -3,6 +3,7 @@ layout: project
 type: project
 image: images/abalone.png
 title: Naive Bayes from scratch
+published: False
 permalink: projects/abalones
 # All dates must be YYYY-MM-DD format!
 date: 2020-05-15

@@ -3,6 +3,7 @@ layout: project
 type: project
 image: images/IMDB/imdb.jpeg
 title: Text Data Classification
+published: False
 permalink: projects/IMDB
 # All dates must be YYYY-MM-DD format!
 date: 2020-06-02
